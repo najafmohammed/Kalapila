@@ -5,25 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <title>Kalapila</title>
     <style>
         /* html{min-width: 600px;height: 90%;} */
     </style>
+    
 </head>
 <body id="mainbg">
 
+    
     <h1  class="text-center"><span class="text-primary display-1">K</span class="display-2"><span>ALAPILA</span></h1>
+    
 
-    <div class="row" style="padding-left: 5%;padding-right: 5%; ;">
-        <div class="card border-info  col-5 col-lg-5 col-sm-5 col-xl-5 col-md-5">
+    
+      
+
+      <!-- The Modal -->
+<script id="teams" type="text/x-handlebars-template">
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">{{Team_name}}</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Team Members
+          <ul class="list-group">
+           
+                <div>
+                    <ul class="list-group">
+                        {{#each member}}
+                        <li class="list-group-item">{{this}}</li>
+                        {{/each}}
+                      </ul>	
+                </div>
+            
+          </ul>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</script>
+      <div class="row" style="padding-left: 5%;padding-right: 5%; ;">
+        <div class="customTeams card border-info  col-5 col-lg-5 col-sm-5 col-xl-5 col-md-5" data-id="1">
             <div class="card-body">
             <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Go Corona</h4>
             <img class="card-img" style="height: 15vh;" src="https://picsum.photos/200/300">
             </div>
         </div>
         <div class="col-2 col-lg-2 col-sm-2 col-xl-2 col-md-2"></div>
-        <div class="card border-info col-xl-5 col-5 col-lg-5 col-sm-5 col-md-5" >
+        <div class="card border-info col-xl-5 col-5 col-lg-5 col-sm-5 col-md-5 customTeams" data-id="2">
             <div class="card-body">
             <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Annamma's Army</h4>
             <img class="card-img" style="height: 15vh;" src="https://picsum.photos/200/300">
@@ -36,14 +81,14 @@
     </div>
 
     <div class="row" style="padding-left: 5%;padding-right: 5%; ;">
-        <div class="card border-info  col-5 col-lg-5 col-sm-5 col-xl-5 col-md-5">
+        <div class="card border-info  col-5 col-lg-5 col-sm-5 col-xl-5 col-md-5 customTeams" data-id="3">
             <div class="card-body">
             <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Veetil Iri</h4>
             <img class="card-img" style="height: 15vh;" src="https://picsum.photos/200/300">
             </div>
         </div>
         <div class="col-2 col-lg-2 col-sm-2 col-xl-2 col-md-2"></div>
-        <div class="card border-info col-xl-5 col-5 col-lg-5 col-sm-5 col-md-5" >
+        <div class="card border-info col-xl-5 col-5 col-lg-5 col-sm-5 col-md-5 customTeams" data-id="4">
             <div class="card-body">
             <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Nammal Powlikyum</h4>
             <img class="card-img" style="height: 15vh;" src="https://picsum.photos/200/300">
@@ -67,4 +112,32 @@ VANTA.CELLS({
   speed: 5.00
 })
 </script>
+<script>
+    
+
+    $('.customTeams').on('click', function(e){
+       
+        var template = $('#teams').html();
+    // compile the template
+    var templateScript = Handlebars.compile(template);
+        
+        var x1 = { "Team_name" : "Go Corona",member:["xl","xd","sd"]};
+        var x2 = { "Team_name" : "Annamas army",member:["xl","xd","sd"]};
+        var x3 = { "Team_name" : "Veetil iri",member:["xl","xd","sd"]};
+        var x4 = { "Team_name" : "Nyangal powlikyum",member:["xl","xd","sd"]};
+        var x=[x1,x2,x3,x4];
+        var typea=$(this).attr("data-id");
+        console.log('rendering detail page for '+typea);
+        var context=x[typea-1];
+        context=x[typea-1];
+        console.log(context);
+    var html = templateScript(context);
+       
+    // execute the compiled template and print the output to the console
+    $("body").append(html);
+    console.log(html);
+    $("#myModal").modal('show');
+    
+    });
+  </script>
 </html>

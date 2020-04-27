@@ -6,8 +6,8 @@ var team1 = { "Team_name" : "Go Corona",
                         "Christeena",
                         "Suby",
                         "Aswathy"],
-                badge1:["Captain","Vice Captain","Vice Captain"],
-                badge2:["0","0","0","0","0","0","0"]
+                badge1:["Captain","Vice Captain"],
+                badge2:["0","0","1","1","0","0","0"]
             };
                         
 var team2 = { "Team_name" : "Annamma's Army",
@@ -17,7 +17,10 @@ var team2 = { "Team_name" : "Annamma's Army",
                         "Likitha",
                         "Abhinand",
                         "Nimisha",
-                        "Sreedevi"]};
+                        "Sreedevi"],
+                        badge1:["Captain","Vice Captain"],
+                        badge2:["1","0","0","1","1","0","0"]
+                    };
 var team3 = { "Team_name" : "Veetil Iri",
                         member:["Nisha ",
                         "Melvin",
@@ -26,7 +29,10 @@ var team3 = { "Team_name" : "Veetil Iri",
                         "Sneha Sara",
                         "Devika ",
                         "Bipin",
-                        "Renz"]};
+                        "Renz"],
+                        badge1:["Captain","Vice Captain"],
+                        badge2:["1","0","0","0","1","1","0","0"]
+                    };
 var team4 = { "Team_name" : "Nammal Powlikyum",
                         member:["Shuhaib ",
                         "Ananthu ",
@@ -34,4 +40,187 @@ var team4 = { "Team_name" : "Nammal Powlikyum",
                         "Reenu",
                         "Sandra",
                         "Aparna",
-                        "Minhaj"]};
+                        "Minhaj"],
+                        badge1:["Captain","Vice Captain"],
+                        badge2:["1","0","0","1","1","0","0"]
+                    };
+var eventsx={"events":[
+    {
+        name:"Quiz",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+
+    },
+    {
+        name:"Pencil Drawing",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Story telling",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Singing ",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"awaiting Result",
+        finished:""
+    },
+    {
+        name:"Essay writing(Malayalam)",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Essay writing(English)",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Photo editing",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Prank call",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Imitate teacher",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Product using waste materials",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Dubbing ",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Ludo ",
+        tier:"1",
+        winner1:"Abhinand",
+        winner2:"Jeffin",
+        winner3:"Shuhaib",
+        status:"",
+        finished:"complete"
+    },
+    {
+        name:"Crossword (Team) ",
+        tier:"3",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Calligraphy ",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"8 - ball Pool",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Modelling ",
+        tier:"2",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Dancing ",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Sudoku (Team)",
+        tier:"3",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    },
+    {
+        name:"Poetry ",
+        tier:"1",
+        winner1:"",
+        winner2:"",
+        winner3:"",
+        status:"incomplete",
+        finished:""
+    }
+]};
+var points={
+    point1:"1",
+    point2:"2",
+    point3:"3",
+    point4:"4"
+}

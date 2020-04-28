@@ -1,50 +1,49 @@
 //teams info and events info
 var team1 = { "Team_name" : "Go Corona",
-                member:["Layo",
-                        "Arjun",
-                        "Arya",
-                        "Jeffin",
-                        "Christeena",
-                        "Suby",
-                        "Aswathy"],
-                badge1:["Captain","Vice Captain"],
-                badge2:["0","0","1","1","0","0","0"]
+                "member":[
+                    {name:"layo",       matches:"0",points:"0",rank:"Captain"},
+                    {name:"Arjun",      matches:"1",points:"0",rank:"Vice Captain"},
+                    {name:"Arya",       matches:"1",points:"0",rank:"Vice Captain"},
+                    {name:"Jeffin",     matches:"1",points:"3",rank:"Captain"},
+                    {name:"Christeena", matches:"2",points:"10",rank:"Captain"},
+                    {name:"Suby",       matches:"1",points:"0",rank:"Captain"},
+                    {name:"Aswathy",    matches:"1",points:"0",rank:"Captain"}
+            ]
             };
-                        
 var team2 = { "Team_name" : "Annamma's Army",
-                        member:["Sneha Anna",
-                        "Mishab ",
-                        "Navneet",
-                        "Likitha",
-                        "Abhinand",
-                        "Nimisha",
-                        "Sreedevi"],
-                        badge1:["Captain","Vice Captain"],
-                        badge2:["1","0","0","1","1","0","0"]
-                    };
-var team3 = { "Team_name" : "Veetil Iri",
-                        member:["Nisha ",
-                        "Melvin",
-                        "Pavithra",
-                        "Shishir",
-                        "Sneha Sara",
-                        "Devika ",
-                        "Bipin",
-                        "Renz"],
-                        badge1:["Captain","Vice Captain"],
-                        badge2:["1","0","0","0","1","1","0","0"]
-                    };
+        "member":[
+            {name:"Sneha Anna",         matches:"3",points:"0",rank:"Captain"},
+            {name:"Mishab",             matches:"0",points:"0",rank:"Vice Captain"},
+            {name:"Navneet",            matches:"0",points:"0",rank:"チーム"},
+            {name:"Likitha",            matches:"1",points:"0",rank:"チーム"},
+            {name:"Abhinand",           matches:"2",points:"5",rank:" ACE "},
+            {name:"Nimisha",            matches:"1",points:"0",rank:"チーム"},
+            {name:"Sreedevi",           matches:"0",points:"0",rank:"チーム"}
+                ]
+};
+var team3 = { "Team_name" : "Veetil Iri🦚",
+        "member":[
+            {name:"Nisha",          matches:"2",points:"0",rank:"Captain"},
+            {name:"Melvin",         matches:"1",points:"0",rank:"Vice Captain"},
+            {name:"Pavithra",       matches:"1",points:"0",rank:"チーム"},
+            {name:"Shishir",        matches:"1",points:"0",rank:"チーム"},
+            {name:"Sneha Sara",     matches:"1",points:"7",rank:" ACE "},
+            {name:"Devika",         matches:"1",points:"0",rank:"チーム"},
+            {name:"Bipin",          matches:"0",points:"0",rank:"チーム"},
+            {name:"Renz",           matches:"0",points:"0",rank:"チーム"}
+                ]
+};
 var team4 = { "Team_name" : "Nammal Powlikyum",
-                        member:["Shuhaib ",
-                        "Ananthu ",
-                        "Revathy",
-                        "Reenu",
-                        "Sandra",
-                        "Aparna",
-                        "Minhaj"],
-                        badge1:["Captain","Vice Captain"],
-                        badge2:["1","0","0","1","1","0","0"]
-                    };
+        "member":[
+            {name:"Shuhaib",         matches:"1",points:"1",rank:"Captain"},
+            {name:"Ananthu",         matches:"0",points:"0",rank:"Vice Captain"},
+            {name:"Revathy",         matches:"1",points:"0",rank:"チーム"},
+            {name:"Reenu",           matches:"2",points:"4",rank:" ACE "},
+            {name:"Sandra",          matches:"2",points:"0",rank:"チーム"},
+            {name:"Aparna",          matches:"1",points:"0",rank:"チーム"},
+            {name:"Minhaj",          matches:"0",points:"0",rank:"チーム"}
+                ]
+};            
 
 
 var eventsx={"events":[
@@ -79,11 +78,11 @@ var eventsx={"events":[
     {
         name:"Singing ",
         tier:"2",
-        winner1:"",
-        winner2:"",
-        winner3:"",
-        status:"awaiting Result",
-        finished:""
+        winner1:"Christeena(10)",
+        winner2:"Sneha sara(7)",
+        winner3:"Reenu(4)",
+        status:"",
+        finished:"complete"
     },
     {
         name:"Essay writing(Malayalam)",
@@ -151,9 +150,9 @@ var eventsx={"events":[
     {
         name:"Ludo ",
         tier:"1",
-        winner1:"Abhinand",
-        winner2:"Jeffin",
-        winner3:"Shuhaib",
+        winner1:"Abhinand(5)",
+        winner2:"Jeffin(3)",
+        winner3:"Shuhaib(1)",
         status:"",
         finished:"complete"
     },

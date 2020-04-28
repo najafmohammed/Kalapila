@@ -38,6 +38,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#Events">Events</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/najafmohammed/Kalapila" target=”_blank”>About</a>
+              </li>
           </ul>
         </div>
       </nav>
@@ -46,16 +49,42 @@
  
  <div id="home" class="jumbotron rounded-lg " style="margin: 3%;margin-top: 50px;">
     <h3 class="container-fluid float left text-centers">Event Progress 
-        <span class="badge badge-info animated flip slow delay-2s"> 2/18</span></h3>
-        <div class="progress">
+        <span class="badge badge-info animated flip slower delay-1s"> 2/18</span>
+    </h3>
+        <div class="progress animateProgress">
             <div class="float-left progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" 
             style="width: 11%"></div>
+        </div>
+    <div class="row" style="margin: 5px;">
+        <!-- xxxxxxxxxxxxxxxxxxxxxxx LEAD    xxxxxxxxxxxxxxxx -->
+        <div id="lead_btn" style="margin: 5px;" class="btn btn-lg btn-info animated fadeInUpBig slowe ">Lead Annamma's Army</div> 
+        <!-- xxxxxxxxxxxxxxxxxxxxxxx NEXT EVENT    xxxxxxxxxxxxxxxx -->
+        <div id="nxt_event" style="margin: 5px;"class="btn btn-lg btn-info animated fadeInUpBig slowe ">Next Event Singing</div>
+    </div>
+</div>
+<script id="leaderboard" type="text/x-handlebars-template">
+    <div class="modal fade" id="modalLeaderboard">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Leader Board</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
- <div class="row" style="margin: 5px;">
-    <div id="lead_btn" style="margin: 5px;" class="btn btn-lg btn-info ">Lead Annamma's Army</div>
-    <div id="nxt_event" style="margin: 5px;"class="btn btn-lg btn-info ">Next Event Singing</div>
-</div>
-</div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            Provide statistics and leaderBoard ranking
+            <span class="badge badge-danger"> Currently Being worked On</span> 
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </script>
       <!-- The Modal -->
 <script id="teams" type="text/x-handlebars-template">
   <div class="modal fade" id="myModal">
@@ -378,9 +407,9 @@
             <span class="badge badge-danger float-left">{{status}}</span>
             <span class="badge badge-success float-left">{{finished}}</span></th>
         <th>{{tier}}</th>
-        <th>{{winner1}}</th>
-        <th>{{winner2}}</th>
-        <th>{{winner3}}</th>
+        <th>{{winner1}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank1.svg" height="20px"></th>
+        <th>{{winner2}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank2.svg" height="20px"></th>
+        <th>{{winner3}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank3.svg" height="20px"></th>
       </tr>
       {{/each}}
     <tbody>
@@ -392,7 +421,7 @@
 </div>
 </script>
 
-<a href="https://github.com/najafmohammed/Kalapila"class="link-to-github" target=”_blank”></a>
+<div id="leaderboard_btn" class="btn btn-primary link-to-github  animated heartBeat infinite slower delay-5s"><a  class="" target=”_blank”></a></div>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
@@ -420,6 +449,17 @@ VANTA.CELLS({
         var templateScript = Handlebars.compile(template);
         var html = templateScript(points);
         $(document.body).append(html);
+</script>
+<script>
+    $('#leaderboard_btn').on('click',function(e){
+        var template = $('#leaderboard').html();
+        var templateScript = Handlebars.compile(template);
+        var html = templateScript(xl);
+        $(document.body).append(html);
+        $("#modalLeaderboard").modal('show');
+        console.log("jskd");
+
+    });
 </script>
 
 <script>

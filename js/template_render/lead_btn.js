@@ -1,5 +1,5 @@
 $('#lead_btn').on('click',function(e){
-    var first = xl.t_name1;
+    var first = xlc.t_name1;
     var template,templateScript,html;
     
     switch(first){

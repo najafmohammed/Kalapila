@@ -1,3 +1,4 @@
+var xlc;
 var scores=[0,0,0,0];
  var scorex=0;
  for (var i=0;i<team1.member.length;i++){
@@ -39,7 +40,7 @@ var publicscore=scores.slice();
     
       var template = $('#leaderboard').html();
       var templateScript = Handlebars.compile(template);
- var xlc={"t_point1":scores[0],
+  xlc={"t_point1":scores[0],
       "t_point2":scores[1],
       "t_point3":scores[2],
       "t_point4":scores[3],
@@ -60,5 +61,15 @@ vid.addEventListener("play", function() {
       $("#modalLeaderboard").modal('show');
       
 
-
+  
   });
+  xlc={"t_point1":scores[0],
+  "t_point2":scores[1],
+  "t_point3":scores[2],
+  "t_point4":scores[3],
+  "t_name1":rank_names[0],
+  "t_name2":rank_names[1],
+  "t_name3":rank_names[2],
+  "t_name4":rank_names[3]
+  }
+

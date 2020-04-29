@@ -1,7 +1,7 @@
 //teams info and events info
 var team1 = { "Team_name" : "Go Corona",
                 "member":[
-                    {name:"layo",       matches:"0",points:"0",rank:"Captain"},
+                    {name:"Layo",       matches:"0",points:"0",rank:"Captain"},
                     {name:"Arjun",      matches:"1",points:"0",rank:"Vice Captain"},
                     {name:"Arya",       matches:"1",points:"0",rank:"Vice Captain"},
                     {name:"Jeffin",     matches:"1",points:"3",rank:"Captain"},

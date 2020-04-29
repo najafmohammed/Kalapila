@@ -50,6 +50,13 @@ var publicscore=scores.slice();
       }
       var html = templateScript(xlc);
       $(document.body).append(html);
+
+      var vid = document.getElementById("myAudio");
+vid.addEventListener("play", function() {
+  $('#music_warning').show();
+});
+    $('#user_score').html(" "+p_score_value);
+
       $("#modalLeaderboard").modal('show');
       
 

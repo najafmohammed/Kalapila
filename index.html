@@ -11,8 +11,9 @@
     <link rel="icon" href="arbuzu170400006.jpg">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <script src="js\Data\Team.js"></script>
-    <script src="js\Data\rank.js"></script>
+    <script src="js/Data/Team.js"></script>
+    <script src="js/Data/rank.js"></script>
+    <script src="js/Data/player_score.js"></script>
     <title>Kalapila</title>
     <style>
         /* html{height: auto;margin: 0px;} */
@@ -26,12 +27,12 @@
           <img src="arbuzu170400006.jpg" width="30" height="30" alt="logo">
           <span class="text-primary">K</span><span>ALAPILA</span>
         </a>
-    
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar-list-2">
           <ul class="navbar-nav">
+            
             <li class="nav-item active">
               <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -41,9 +42,26 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://github.com/najafmohammed/Kalapila" target=”_blank”>About</a>
               </li>
+              <li class="nav-item" data-toggle="modal" data-target="#modalLoginAvatar">
+                <a class="nav-link" href="#Events">Change User</a> 
+              </li>
+              
           </ul>
         </div>
       </nav>
+      <div style="position: fixed; margin-top: 5%; z-index: 200;" class="alert alert-dismissible alert-primary animated fadeInLeft slow">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong id="username_nav">Oh snap!</strong>
+      </div>
+      <div style="position: fixed; margin-top: 20%; z-index: 200;" class="alert alert-dismissible alert-info animated fadeInLeft slow">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong id="username_score">Oh snap!</strong>
+      </div>
+      <div id="music_warning" style="position: fixed; z-index: 200; margin-top: 12%; display: none;" class="alert alert-dismissible animated fadeInUp alert-warning ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">🧐</h4>
+        <h3 class="">Told You not to play that</h3>
+      </div>
     
       <script id="home_info" type="text/x-handlebars-template">
         <div id="home" class="jumbotron rounded-lg " style="margin: 3%;margin-top: 50px;">
@@ -75,17 +93,19 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
+           
             Provide statistics and leaderBoard ranking
-            <figure>
+            <figure >
               <figcaption>Don't PLAY</figcaption>
               <audio id="myAudio" 
-                  controls volume="0.1"
+                  controls volume="0.1" 
                   src="bonus/music/GO_Corona.mp3" >
                       Your browser does not support the
                       <code>audio</code> element.
               </audio>
           </figure>
             <span class="badge badge-danger"> Currently Being worked On</span><span class='badge badge-info'>BETA</span>
+          
             <div class="row" style="margin: 5px;">
               <div class="card border-info col-5 animated  flipInX   " style=" margin: 5px;animation-delay: .3s;">
                 <div class="card-header border-primary">RANK 1 <img class="float-left animated tada infinite slower delay-1s" src="images/rank1.svg" height="20px"></div>
@@ -109,6 +129,9 @@
                 <div class="card-body"><h5 style="font-size: large;">{{t_name4}}</h5></div>
                 <div class="card-footer  text-white-50"><kbd><span style="font-size: large;">{{t_point4}}</span> pts</kbd></div>
               </div>
+            </div>
+            <div  class="border border-info d-flex justify-content-center ">
+                  <h5 class="border-primary">YOUR POINTS <span id="user_score" class="badge badge-success"></span></h5>
             </div>
 
 
@@ -425,20 +448,127 @@
         </div>
     </div>
 </script>
-<script>
-  $(document).ready(function(){
-   $('#EventX').load("new.html");
-   console.log("we");
-
-});
-</script>
 <script id="EventX" type="text/x-handlebars-template">
-
+  
+<div id="Events" class="jumbotron table_info"style="margin:1%;">
+  <h3>EVENTS</h3>
+<table style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+  <thead class="table-primary">
+    <tr>
+      <th>EVENT NAME</th>
+      <th>TIER</th>
+      <th>1<sup>st</sup></th>
+      <th>2<sup>nd</sup></th>
+      <th>3<sup>rd</sup></th>
+    </tr>
+  </thead>
+    {{#each events}}
+    <tr>
+      <td ><h6 class="float-left" >{{name}}</h6> 
+          <span class="badge badge-danger float-left">{{status}}</span>
+          <span class="badge badge-success float-left">{{finished}}</span></td>
+      <td>{{tier}}</td>
+      <td>{{winner1}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank1.svg" height="20px"></td>
+      <td>{{winner2}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank2.svg" height="20px"></td>
+      <td>{{winner3}}<img class="float-left animated tada infinite slower delay-5s" src="images/rank3.svg" height="20px"></td>
+    </tr>
+    {{/each}}
+</table>
+</div>
 </script>
 
 <div id="leaderboard_btn" class="btn btn-primary link-to-github  animated heartBeat infinite slower delay-5s"><a  class="" target=”_blank”></a></div>
 
+    <!--Modal: Login with Avatar Form-->
+<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+  <!--Content-->
+  <div class="modal-content">
+
+    <!--Header-->
+    <div class="modal-header">
+      <img src="arbuzu170400006.jpg" alt="avatar" class="rounded-circle img-responsive col-12">
+      
+    </div>
+    <!--Body-->
+    <div class="modal-body text-center mb-1">
+      
+      <h5 class="mt-1 mb-2">WELCOME USER </h5>
+     
+
+      <div class="md-form ml-0 mr-0">
+        <input id="typed_username" type="text" type="text" id="form29" class="form-control form-control-sm validate ml-0">
+        <label data-error="wrong" data-success="right" class="ml-0">Enter your name</label>
+        <label data-error="wrong" data-success="right" class="ml-0">name in small letter if you have any doubt click on your team image to get the names</label>
+      </div>
+
+      <div class="text-center mt-4">
+        <button id="login_button" data-dismiss="modal" class="btn btn-cyan border border-info mt-1">Login</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="col-6 offset-9 btn btn-danger btn-lg" data-dismiss="modal">Close</button>
+    </div>
+
+  </div>
+  <!--/.Content-->
+  
+</div>
+
+</div>
+<!--Modal: Login with Avatar Form-->
 </body>
+
+<script>
+  $('#login_button').on('click', function(e){ 
+    console.log(document.getElementById('typed_username').value);
+    var x="";
+    x=document.getElementById('typed_username').value;
+    myObj = {name: x};
+    myJSON = JSON.stringify(myObj);
+    localStorage.setItem("testJSON", myJSON);
+    text = localStorage.getItem("testJSON");
+    obj = JSON.parse(text);
+    document.getElementById("username_nav").innerHTML = "Welcome Back "+obj.name;
+   });
+   text = localStorage.getItem("testJSON");
+    obj = JSON.parse(text);
+    if(jQuery.isEmptyObject(obj)){
+      $("#modalLoginAvatar").modal('show');
+      }
+    else{
+        document.getElementById("username_nav").innerHTML = "Welcome Back "+obj.name;
+    }
+var p="";
+var p_score_value=0;
+
+console.log(p);
+    for (var i=0;i<team1.member.length;i++){
+      var p1=team1.member[i].name;
+      var p2=team2.member[i].name;
+      var p3=team3.member[i].name;
+      var p4=team4.member[i].name;
+      if(p1==obj.name){
+        p_score_value=team1.member[i].points;
+      }
+      if(p2==obj.name){
+        p_score_value=team2.member[i].points;
+      }
+      if(p3==obj.name){
+        p_score_value=team3.member[i].points;
+      }
+      if(p4==obj.name){
+        p_score_value=team4.member[i].points;
+      }
+
+    }
+    document.getElementById("username_score").innerHTML = "Your Points are "+p_score_value;
+    
+
+  
+  
+</script>
 <script src="js/template_render//Score_Script.js"></script>
 <script src="js/template_render//home_script.js"></script>
 <script src="js/template_render//home_team_script.js"></script>

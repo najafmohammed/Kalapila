@@ -22,3 +22,10 @@ var next_event_details={
         rule:"Enjoy the Game.💫 "
     }
 ]};
+var updates={
+    "Event_name_1":"Modellling",
+    "title_1":"Entry from Annamma's_army",
+    "title_2":"Entry from Go Corona",
+    "title_3":"Entry from Nammal Powlikyum",
+    "title_4":"Entry from Veetil Iri🦚"
+}

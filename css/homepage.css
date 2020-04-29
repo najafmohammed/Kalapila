@@ -24,3 +24,26 @@ html {
 .animateProgress{
     animation: progress 3s linear ;
 }
+.modal-dialog-full-width {
+  width: 100% !important;
+  
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+  height: auto !important;
+  min-height: 100% !important;
+  border-radius: 0 !important;
+  
+}
+
+.modal-header-full-width  {
+  
+}
+
+.modal-footer-full-width  {
+  
+}

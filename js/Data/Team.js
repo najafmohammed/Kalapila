@@ -4,33 +4,36 @@ var team1 = { "Team_name" : "Go Corona",
                     {name:"Layo",       matches:"0",points:"0",rank:"Captain"},
                     {name:"Arjun",      matches:"1",points:"0",rank:"Vice Captain"},
                     {name:"Arya",       matches:"1",points:"0",rank:"Vice Captain"},
-                    {name:"Jeffin",     matches:"1",points:"3",rank:"Captain"},
-                    {name:"Christeena", matches:"2",points:"10",rank:"Captain"},
-                    {name:"Suby",       matches:"1",points:"0",rank:"Captain"},
-                    {name:"Aswathy",    matches:"1",points:"0",rank:"Captain"}
+                    {name:"Jeffin",     matches:"1",points:"3",rank:"チーム"},
+                    {name:"Christeena", matches:"2",points:"10",rank:" ACE "},
+                    {name:"Suby",       matches:"1",points:"0",rank:"チーム"},
+                    {name:"Aswathy",    matches:"1",points:"7",rank:"チーム"},
+                    {name:"LOGO",       matches:"1",points:"20",rank:"チーム"}
             ]
             };
 var team2 = { "Team_name" : "Annamma's Army",
         "member":[
-            {name:"Sneha Anna",         matches:"3",points:"0",rank:"Captain"},
+            {name:"Sneha Anna",         matches:"3",points:"4",rank:"Captain"},
             {name:"Mishab",             matches:"0",points:"0",rank:"Vice Captain"},
             {name:"Navneet",            matches:"0",points:"0",rank:"チーム"},
             {name:"Likitha",            matches:"1",points:"0",rank:"チーム"},
             {name:"Abhinand",           matches:"2",points:"5",rank:" ACE "},
             {name:"Nimisha",            matches:"1",points:"0",rank:"チーム"},
-            {name:"Sreedevi",           matches:"0",points:"0",rank:"チーム"}
+            {name:"Sreedevi",           matches:"0",points:"0",rank:"チーム"},
+            {name:"LOGO",               matches:"1",points:"20",rank:"チーム"}
                 ]
 };
 var team3 = { "Team_name" : "Veetil Iri🦚",
         "member":[
             {name:"Nisha",          matches:"2",points:"0",rank:"Captain"},
             {name:"Melvin",         matches:"1",points:"0",rank:"Vice Captain"},
-            {name:"Pavithra",       matches:"1",points:"0",rank:"チーム"},
+            {name:"Pavithra",       matches:"1",points:"0",rank:" ACE "},
             {name:"Shishir",        matches:"1",points:"0",rank:"チーム"},
             {name:"Sneha Sara",     matches:"1",points:"7",rank:" ACE "},
             {name:"Devika",         matches:"1",points:"0",rank:"チーム"},
             {name:"Bipin",          matches:"0",points:"0",rank:"チーム"},
-            {name:"Renz",           matches:"0",points:"0",rank:"チーム"}
+            {name:"Renz",           matches:"0",points:"0",rank:"チーム"},
+            {name:"LOGO",           matches:"1",points:"20",rank:"チーム"}
                 ]
 };
 var team4 = { "Team_name" : "Nammal Powlikyum",
@@ -38,10 +41,11 @@ var team4 = { "Team_name" : "Nammal Powlikyum",
             {name:"Shuhaib",         matches:"1",points:"1",rank:"Captain"},
             {name:"Ananthu",         matches:"0",points:"0",rank:"Vice Captain"},
             {name:"Revathy",         matches:"1",points:"0",rank:"チーム"},
-            {name:"Reenu",           matches:"2",points:"4",rank:" ACE "},
+            {name:"Reenu",           matches:"2",points:"14",rank:" ACE "},
             {name:"Sandra",          matches:"2",points:"0",rank:"チーム"},
             {name:"Aparna",          matches:"1",points:"0",rank:"チーム"},
-            {name:"Minhaj",          matches:"0",points:"0",rank:"チーム"}
+            {name:"Minhaj",          matches:"0",points:"0",rank:"チーム"},
+            {name:"LOGO",            matches:"1",points:"20",rank:"チーム"}
                 ]
 };            
 
@@ -168,11 +172,11 @@ var eventsx={"events":[
     {
         name:"Calligraphy ",
         tier:"2",
-        winner1:"",
-        winner2:"",
-        winner3:"",
-        status:"awaiting result",
-        finished:""
+        winner1:"Reenu(10)",
+        winner2:"Aswathy(7)",
+        winner3:"Sneha Anna(4)",
+        status:"",
+        finished:"Completed"
     },
     {
         name:"8 - ball Pool",

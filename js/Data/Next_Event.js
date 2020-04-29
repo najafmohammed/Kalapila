@@ -1,42 +1,24 @@
 //daily updatable points event details and ranks
 var next_event_details={
-    "event_name":"calligraphy ",
+    "event_name":"Modelling ",
     "description":"A letter is a Word′s clothing.",
     "info":[
     {
-        rule:"2 participants from each team."
+        rule:"Participants must send there full size photo in doc format."
     },
     {
-        rule:"max 2 hours to write"
+        rule:"The photo must have a pose based on any actor or actress from any movie"
     },
     {
-        rule:"There are 2 quotes.Oro teamilulla participantsnu choose cheyyam "
+        rule:"Judging will be based on there way of dressing and the style. "
     },
     {
-        rule:"1.There is Always something to be thankful for"
+        rule:"Out of 2 participants one must be a boy and other must be a girl from each house."
     },
     {
-        rule:"2. Leave a little sparkle wherever you go"
+        rule:"Submission deadline 7:00pm and it must be done before 7:30.pm today."
     },
     {
-        rule:" Make sure it will be a document file "
-    },
-    {
-        rule:" either pen or sketch colour use cheyyam (blue or black) "
-    },
-    {
-        rule:" oru colour vechu thanne use cheyyanm Athinte koode vere colors onnum use cheyyaruthu "
-    },
-    {
-        rule:"before 8 pm participants name tharanam"
-    },
-    {
-        rule:" 2 time lapse enkilum included aayirikkanam"
-    },
-    {
-        rule:" start at 8 pm And 10 manikku kazhiyum 10.15 vare last tym after that -ve mark ndayirikkum "
-    },
-    {
-        rule:" white paper can be used "
-    },
+        rule:"Enjoy the Game.💫 "
+    }
 ]};

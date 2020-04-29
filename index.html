@@ -453,8 +453,9 @@
 <script id="EventX" type="text/x-handlebars-template">
   
 <div id="Events" class="jumbotron table_info"style="margin:1%;">
-  <h3>EVENTS</h3>
-<table style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+  <h3>EVENTS</h3><p>Search for anything</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+<table id="myTable" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
   <thead class="table-primary">
     <tr>
       <th>EVENT NAME</th>
@@ -476,6 +477,8 @@
     </tr>
     {{/each}}
 </table>
+
+
 </div>
 </script>
 

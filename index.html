@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="js/Data/Team.js"></script>
-    <script src="js/Data/rank.js"></script>
-    <script src="js/Data/player_score.js"></script>
-    <title>Kalapila</title>
+    <script src="js/Data/Next_Event.js"></script>
+    <title>KALAPILA</title>
     <style>
         /* html{height: auto;margin: 0px;} */
     </style>
@@ -76,7 +75,7 @@
                <!-- xxxxxxxxxxxxxxxxxxxxxxx LEAD    xxxxxxxxxxxxxxxx -->
                <div id="lead_btn" style="margin: 5px;" class="btn btn-lg btn-info animated fadeInUpBig slow "><span class="badge badge-success">Lead</span> {{t_name1}}</div> 
                <!-- xxxxxxxxxxxxxxxxxxxxxxx NEXT EVENT    xxxxxxxxxxxxxxxx -->
-               <div id="nxt_event" style="margin: 5px;"class="btn btn-lg btn-info animated fadeInUpBig slow "><span class="badge badge-success">Current Event</span> Singing</div>
+               <div id="nxt_event" style="margin: 5px;"class="btn btn-lg btn-info animated fadeInUpBig slow "><span class="badge badge-success">Current Event</span> event_name</div>
            </div>
        </div>
    </script>
@@ -305,7 +304,7 @@
             <ul class="list-group ">
                 <h3>{{description}}</h3>
                 {{#each info}}
-                <li class="list-group-item">{{rule}}</li>
+                <li class="list-group-item">🛑{{rule}}</li>
                 {{/each}}
             </ul>
 

@@ -63,7 +63,7 @@ var eventsx={"events":[
         winner1:"",
         winner2:"",
         winner3:"",
-        status:"incomplete",
+        status:"awaiting result",
         finished:""
     },
     {
@@ -171,7 +171,7 @@ var eventsx={"events":[
         winner1:"",
         winner2:"",
         winner3:"",
-        status:"incomplete",
+        status:"awaiting result",
         finished:""
     },
     {

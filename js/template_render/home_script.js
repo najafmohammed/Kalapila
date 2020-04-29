@@ -14,4 +14,5 @@ function renderUpdate(){
   var html = templateScript(xxl);
   $(document.body).append(html);
 }
+
 renderUpdate();

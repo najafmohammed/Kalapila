@@ -1,6 +1,5 @@
 var template = $('#EventX').html();
 $(document).ready(function(){
-    console.log("loggable");
     $("#myInput").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $("#myTable tr").filter(function() {

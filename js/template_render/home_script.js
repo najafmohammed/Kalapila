@@ -1,6 +1,6 @@
 var xxl={"t_name1":rank_names[0]
 ,"event_name":next_event_details.event_name,
-"progress":"5/18",
+"progress":"14/18",
 "Event_name_1":updates.Event_name_1,
 "title_1":updates.title_1,
 "title_2":updates.title_2,

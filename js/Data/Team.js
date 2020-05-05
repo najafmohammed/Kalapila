@@ -1,14 +1,14 @@
 //teams info and events info
 var team1 = { "Team_name" : "Go Corona",
-                "member":[
-                    {name:"Layo",       matches:"1",points:"0",rank:"Captain"},
-                    {name:"Arjun",      matches:"1",points:"4",rank:"Vice Captain"},
-                    {name:"Arya",       matches:"1",points:"0",rank:"Vice Captain"},
-                    {name:"Jeffin",     matches:"2",points:"3",rank:"チーム"},
-                    {name:"Christeena", matches:"3",points:"10",rank:" ACE "},
-                    {name:"Suby",       matches:"1",points:"7",rank:"チーム"},
-                    {name:"Aswathy",    matches:"1",points:"7",rank:"チーム"},
-                    {name:"LOGO",       matches:"1",points:"20",rank:"チーム"}
+        "member":[
+            {name:"Layo",       matches:"1",points:"0",rank:"Captain"},
+            {name:"Arjun",      matches:"1",points:"4",rank:"Vice Captain"},
+            {name:"Arya",       matches:"1",points:"0",rank:"Vice Captain"},
+            {name:"Jeffin",     matches:"2",points:"3",rank:"チーム"},
+            {name:"Christeena", matches:"3",points:"10",rank:" ACE "},
+            {name:"Suby",       matches:"1",points:"7",rank:"チーム"},
+            {name:"Aswathy",    matches:"1",points:"7",rank:"チーム"},
+            {name:"LOGO",       matches:"1",points:"20",rank:"チーム"}
             ]
             };
 var team2 = { "Team_name" : "Annamma's Army",

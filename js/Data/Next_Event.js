@@ -1,26 +1,32 @@
 //daily updatable points event details and ranks
 var next_event_details={
-    "event_name":"CrossWord ",
+    "event_name":"Dubbing ",
     "description":"",
     "info":[
     {
-        rule:"There will be 17 questions"
+        rule:" Participants can select any Video out of 3."
     },
     {
-        rule:"Time limit is today 10 pm."
+        rule:"Video of each participant must be different from same group."
     },
     {
-        rule:"The group with most correct answers wins. "
+        rule:"2 participants from each group. "
     },
     {
-        rule:"If every teams gets all correct answers then the rank will be based on first submission."
+        rule:"Submit by 8May 11:00am atmost 11:30Am."
+    },
+    {
+        rule:"A team should dub 2 different videos"
+    },
+    {
+        rule:"The dialouges must be same as the scene in the film and the lip sync will be considered for grading"
     },
     {
         rule:"Enjoy the Game.💫 "
     }
 ]};
 var updates={
-    "Event_name_1":"Modellling",
+    "Event_name_1":"Modelling",
     "title_1":"Entry from Annamma's_army",
     "title_2":"Entry from Go Corona",
     "title_3":"Entry from Nammal Powlikyum",

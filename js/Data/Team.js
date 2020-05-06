@@ -9,25 +9,27 @@ var team1 = { "Team_name" : "Go Corona",
             {name:"Suby",       matches:"2",points:"11",rank:"チーム"},
             {name:"Aswathy",    matches:"2",points:"7",rank:"チーム"},
             {name:"LOGO",       matches:"1",points:"20",rank:"チーム"},
-            {name:"Crossword",  matches:"1",points:"10",rank:"チーム"}
+            {name:"Crossword",  matches:"1",points:"10",rank:"チーム"},
+            {name:"Negative point",matches:"1",points:"-2",rank:"チーム"}
             ]
             };
 var team2 = { "Team_name" : "Annamma's Army",
         "member":[
             {name:"Sneha Anna",         matches:"4",points:"5",rank:"Captain"},
             {name:"Mishab",             matches:"2",points:"3",rank:"Vice Captain"},
-            {name:"Navneet",            matches:"2",points:"5",rank:"チーム"},
+            {name:"Navneet",            matches:"2",points:"6",rank:"チーム"},
             {name:"Likitha",            matches:"4",points:"9",rank:"チーム"},
             {name:"Abhinand",           matches:"3",points:"15",rank:" ACE "},
             {name:"Nimisha",            matches:"2",points:"7",rank:"チーム"},
             {name:"Sreedevi",           matches:"3",points:"11",rank:"チーム"},
             {name:"LOGO",               matches:"1",points:"20",rank:"チーム"},
-            {name:"Crossword",          matches:"1",points:"15",rank:"チーム"}
+            {name:"Crossword",          matches:"1",points:"15",rank:"チーム"},
+            {name:"Negative point",     matches:"1",points:"0",rank:"チーム"}
                 ]
 };
 var team3 = { "Team_name" : "Veetil Iri🦚",
         "member":[
-            {name:"Nisha",          matches:"4",points:"4",rank:"Captain"},
+            {name:"Nisha",          matches:"4",points:"7",rank:"Captain"},
             {name:"Melvin",         matches:"4",points:"11",rank:"Vice Captain"},
             {name:"Pavithra",       matches:"3",points:"0",rank:" ACE "},
             {name:"Shishir",        matches:"1",points:"7",rank:"チーム"},
@@ -36,7 +38,8 @@ var team3 = { "Team_name" : "Veetil Iri🦚",
             {name:"Bipin",          matches:"1",points:"5",rank:"チーム"},
             {name:"Renz",           matches:"1",points:"0",rank:"チーム"},
             {name:"LOGO",           matches:"1",points:"20",rank:"チーム"},
-            {name:"Crossword",      matches:"1",points:"0",rank:"チーム"}
+            {name:"Crossword",      matches:"1",points:"0",rank:"チーム"},
+            {name:"Negative point", matches:"1",points:"0",rank:"チーム"}
                 ]
 };
 var team4 = { "Team_name" : "Nammal Powlikyum",
@@ -44,12 +47,13 @@ var team4 = { "Team_name" : "Nammal Powlikyum",
             {name:"Shuhaib",         matches:"3",points:"6",rank:"Captain"},
             {name:"Ananthu",         matches:"2",points:"11",rank:"Vice Captain"},
             {name:"Revathy",         matches:"3",points:"5",rank:"チーム"},
-            {name:"Reenu",           matches:"3",points:"14",rank:" ACE "},
+            {name:"Reenu",           matches:"3",points:"19",rank:" ACE "},
             {name:"Sandra",          matches:"4",points:"20",rank:"チーム"},
             {name:"Aparna",          matches:"2",points:"1",rank:"チーム"},
             {name:"Minhaj",          matches:"3",points:"10",rank:"チーム"},
             {name:"LOGO",            matches:"1",points:"20",rank:"チーム"},
-            {name:"Crossword",       matches:"1",points:"20",rank:"チーム"}
+            {name:"Crossword",       matches:"1",points:"20",rank:"チーム"},
+            {name:"Negative point",  matches:"1",points:"0",rank:"チーム"}
                 ]
 };            
 
@@ -113,11 +117,11 @@ var eventsx={"events":[
     {
         name:"Essay writing(English)",
         tier:"1",
-        winner1:"",
-        winner2:"",
-        winner3:"",
-        status:"incomplete",
-        finished:""
+        winner1:"Reenu(5)",
+        winner2:"Nisha(3)",
+        winner3:"Navneet(1)",
+        status:"",
+        finished:"Completed"
     },
     {
         name:"Photo editing",
@@ -228,12 +232,21 @@ var eventsx={"events":[
         finished:""
     },
     {
-        name:"Poetry ",
+        name:"Poem Writing ",
         tier:"1",
-        winner1:"",
-        winner2:"",
-        winner3:"",
-        status:"incomplete",
-        finished:""
+        winner1:"Sneha Sara(5)",
+        winner2:"Likitha(3)",
+        winner3:"Layo(1)",
+        status:"",
+        finished:"Completed"
+    },
+    {
+        name:"Poem Recitation ",
+        tier:"1",
+        winner1:"Sneha Sara(5)",
+        winner2:"Likitha(3)",
+        winner3:"Revathi(1)",
+        status:"",
+        finished:"Completed"
     }
 ]};

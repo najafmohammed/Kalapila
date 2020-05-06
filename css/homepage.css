@@ -16,14 +16,6 @@ html {
     scroll-behavior: smooth;
   }
 
-  @keyframes progress {
-    0%   {width: 0px;}
-    50%  {width:50%;}
-    100% {width:100%;}
-  }
-.animateProgress{
-    animation: progress 3s linear ;
-}
 .modal-dialog-full-width {
   width: 100% !important;
   

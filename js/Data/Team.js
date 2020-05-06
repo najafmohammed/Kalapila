@@ -103,7 +103,7 @@ var eventsx={"events":[
         winner2:"Sneha sara(7)",
         winner3:"Reenu(4)",
         status:"",
-        finished:"completed"
+        finished:"Completed"
     },
     {
         name:"Essay writing(Malayalam)",
@@ -175,7 +175,7 @@ var eventsx={"events":[
         winner2:"Jeffin(3)",
         winner3:"Shuhaib(1)",
         status:"",
-        finished:"completed"
+        finished:"Completed"
     },
     {
         name:"Crossword (Team) ",

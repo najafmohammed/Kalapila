@@ -1,3 +1,7 @@
+var progress_update;
+
+
+
 var xlc;
 var scores=[0,0,0,0];
  var scorex=0;

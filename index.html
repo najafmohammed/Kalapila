@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="boostrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <link rel="icon" href="arbuzu170400006.jpg">
   <link rel="stylesheet" href="css/homepage.css">
@@ -180,17 +183,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-
             Provide statistics and leaderBoard ranking
-            <figure >
-              <figcaption>Don't PLAY</figcaption>
-              <audio id="myAudio"
-                  controls volume="0.1"
-                  src="bonus/music/GO_Corona.mp3" >
-                      Your browser does not support the
-                      <code>audio</code> element.
-              </audio>
-          </figure>
             <span class="badge badge-danger"> Currently Being worked On</span><span class='badge badge-info'>BETA</span>
 
             <div class="row" style="margin: 5px;">
@@ -244,32 +237,24 @@
         <!-- Modal body -->
         <div class="modal-body">
           Team Members
-          <ul class="list-group">
-                <div>
-                    <ul class="list-group float-left ">
-                        <li class="list-group-item active">Name</li>
-                        {{#each member}}
-                        <li class="list-group-item">
-                            {{name}} <span class="badge badge-info">{{matches}}</span>
-                            </li>
-                        {{/each}}
-                      </ul>
-                      <ul class="list-group float-left">
-                        <li class="list-group-item active">Rank</li>
-                        {{#each member}}
-                        <li class="list-group-item">
-                            <span class="badge badge-danger">{{rank}}</span></li>
-                        {{/each}}
-                      </ul>
-                      <ul class="list-group float-left">
-                        <li class="list-group-item active">Points</li>
-                        {{#each member}}
-                        <li class="list-group-item">
-                            <span class="badge badge-success">{{points}}</span></li>
-                        {{/each}}
-                      </ul>
-                </div>
-          </ul>
+          <table id="team1_table" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+            <thead class="table-primary">
+              <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each member}}
+              <tr>
+                <td >{{name}}<span class="badge badge-info">{{matches}}</span></td>
+                <td ><span class="badge badge-danger">{{rank}}</span></li></td>
+                <td ><span class="badge badge-info">{{points}}</span></li></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -292,32 +277,24 @@
           <!-- Modal body -->
           <div class="modal-body">
             Team Members
-            <ul class="list-group">
-                <div>
-                  <ul class="list-group float-left ">
-                    <li class="list-group-item active">Name</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        {{name}} <span class="badge badge-info">{{matches}}</span>
-                        </li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Rank</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-danger">{{rank}}</span></li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Points</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-success">{{points}}</span></li>
-                    {{/each}}
-                  </ul>
-                </div>
-          </ul>
+            <table id="team2_table" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+              <thead class="table-primary">
+                <tr>
+                  <th>Name</th>
+                  <th>Rank</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each member}}
+                <tr>
+                  <td >{{name}}<span class="badge badge-info">{{matches}}</span></td>
+                  <td ><span class="badge badge-danger">{{rank}}</span></li></td>
+                  <td ><span class="badge badge-info">{{points}}</span></li></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
@@ -340,61 +317,26 @@
           <!-- Modal body -->
           <div class="modal-body">
             Team Members
-            <ul class="list-group">
-                <div>
-                  <ul class="list-group float-left ">
-                    <li class="list-group-item active">Name</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        {{name}} <span class="badge badge-info">{{matches}}</span>
-                        </li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Rank</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-danger">{{rank}}</span></li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Points</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-success">{{points}}</span></li>
-                    {{/each}}
-                  </ul>
+            <table id="team3_table" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+              <thead class="table-primary">
+                <tr>
+                  <th>Name</th>
+                  <th>Rank</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each member}}
+                <tr>
+                  <td >{{name}}<span class="badge badge-info">{{matches}}</span></td>
+                  <td ><span class="badge badge-danger">{{rank}}</span></li></td>
+                  <td ><span class="badge badge-info">{{points}}</span></li></td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
                 </div>
           </ul>
-          </div>
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </script>
-  <script id="nxtevent" type="text/x-handlebars-template">
-    <div class="modal fade" id="nxt_event_description">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">{{event_name}}</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <!-- Modal body -->
-          <div class="modal-body">
-
-            <ul class="list-group ">
-                <h3>{{description}}</h3>
-                {{#each info}}
-                <li class="list-group-item">🛑{{rule}}</li>
-                {{/each}}
-            </ul>
-
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
@@ -419,28 +361,24 @@
               Team Members
               <ul class="list-group">
                 <div>
-                  <ul class="list-group float-left ">
-                    <li class="list-group-item active">Name</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        {{name}} <span class="badge badge-info">{{matches}}</span>
-                        </li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Rank</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-danger">{{rank}}</span></li>
-                    {{/each}}
-                  </ul>
-                  <ul class="list-group float-left">
-                    <li class="list-group-item active">Points</li>
-                    {{#each member}}
-                    <li class="list-group-item">
-                        <span class="badge badge-success">{{points}}</span></li>
-                    {{/each}}
-                  </ul>
+                  <table id="team4_table" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
+                    <thead class="table-primary">
+                      <tr>
+                        <th>Name</th>
+                        <th>Rank</th>
+                        <th>Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{#each member}}
+                      <tr>
+                        <td >{{name}}<span class="badge badge-info">{{matches}}</span></td>
+                        <td ><span class="badge badge-danger">{{rank}}</span></li></td>
+                        <td ><span class="badge badge-info">{{points}}</span></li></td>
+                      </tr>
+                      {{/each}}
+                    </tbody>
+                  </table>
                 </div>
           </ul>
             </div>
@@ -448,6 +386,35 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="nxtevent" type="text/x-handlebars-template">
+      <div class="modal fade" id="nxt_event_description">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">{{event_name}}</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+  
+              <ul class="list-group ">
+                  <h3>{{description}}</h3>
+                  {{#each info}}
+                  <li class="list-group-item">🛑{{rule}}</li>
+                  {{/each}}
+              </ul>
+  
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+  
           </div>
         </div>
       </div>
@@ -537,8 +504,11 @@
   <script id="EventX" type="text/x-handlebars-template">
 
     <div id="Events" class="jumbotron table_info"style="margin:1%;">
-  <h3>EVENTS</h3><p>Search for anything</p>
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <h1 class="heading">EVENTS</h1>
+  <div class="alert alert-dismissible alert-success animated fadeInLeft slow">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h6> click on the table headings to sort that column </h6>
+  </div>
 <table id="myTable" style="max-height: 500px;overflow-y: scroll;" class="table table-responsive table-light">
   <thead class="table-primary">
     <tr>

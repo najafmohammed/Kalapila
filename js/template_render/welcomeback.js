@@ -4,8 +4,8 @@ $('#login_button').on('click', function(e){
     x=document.getElementById('typed_username').value;
     myObj = {name: x};
     myJSON = JSON.stringify(myObj);
-    localStorage.setItem("testJSON", myJSON);
-    text = localStorage.getItem("testJSON");
+    localStorage.setItem("testJSON2", myJSON);
+    text = localStorage.getItem("testJSON2");
     obj = JSON.parse(text);
     document.getElementById("username_nav").innerHTML = "Welcome Back "+obj.name;
    });
@@ -15,7 +15,7 @@ $('#login_button').on('click', function(e){
     localStorage.setItem("testJSON1", myJSON1);
     $('#start_warning').hide();
    }); 
-   text = localStorage.getItem("testJSON");
+   text = localStorage.getItem("testJSON2");
     obj = JSON.parse(text);
     text1 = localStorage.getItem("testJSON1");
     obj1 = JSON.parse(text1);

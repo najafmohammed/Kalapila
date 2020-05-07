@@ -1,10 +1,11 @@
 var ranksxx=["","","",""];
   for(var i=0;i<rank_names.length;i++){
-    switch (rank_names[i]){
-      case "Go Corona": ranksxx[i]="images/rank"+(i+1)+".svg"; break;
-      case "Annamma's Army":ranksxx[i]="images/rank"+(i+1)+".svg"; break;
-      case "Veetil Iri🦚":ranksxx[i]="images/rank"+(i+1)+".svg"; break;
-      case "Nammal Powlikyum":ranksxx[i]="images/rank"+(i+1)+".svg"; break;
+    var name=rank_names[i];
+    switch (name){
+      case 'Go Corona': ranksxx[0]="images/rank"+(i+1)+".svg"; break;
+      case "Annamma's Army":ranksxx[1]="images/rank"+(i+1)+".svg"; break;
+      case "Veetil Iri🦚":ranksxx[2]="images/rank"+(i+1)+".svg";;break;
+      case "Nammal Powlikyum":ranksxx[3]="images/rank"+(i+1)+".svg";;break;
     }
   }
   

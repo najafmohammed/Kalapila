@@ -9,13 +9,24 @@ $('#login_button').on('click', function(e){
     obj = JSON.parse(text);
     document.getElementById("username_nav").innerHTML = "Welcome Back "+obj.name;
    });
+   $('#dontshow').on('click', function(e){
+    myObj1= {dontshow1: 1};
+    myJSON1 = JSON.stringify(myObj1);
+    localStorage.setItem("testJSON1", myJSON1);
+    $('#start_warning').hide();
+   }); 
    text = localStorage.getItem("testJSON");
     obj = JSON.parse(text);
+    text1 = localStorage.getItem("testJSON1");
+    obj1 = JSON.parse(text1);
     if(jQuery.isEmptyObject(obj)){
       $("#modalLoginAvatar").modal('show');
       }
     else{
         document.getElementById("username_nav").innerHTML = "Welcome Back "+obj.name;
+    }
+    if(!jQuery.isEmptyObject(obj1)){
+      $('#start_warning').hide();
     }
 var p="";
 var p_score_value=0;
@@ -38,4 +49,4 @@ var p_score_value=0;
       }
 
     }
-    document.getElementById("username_score").innerHTML = "Your Points are "+p_score_value;
+    document.getElementById("username_score").innerHTML =p_score_value;

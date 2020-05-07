@@ -54,24 +54,11 @@
       </ul>
     </div>
   </nav>
-  <div style="position: fixed; margin-top: 5%; z-index: 200;"
+  <div id="start_warning"style="position: fixed; margin-top: 5%; z-index: 200;"
     class="alert alert-dismissible alert-primary animated fadeInLeft slow">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h6 id="username_nav">name not found try refreshing</h6>
-  </div>
-  <div style="position: fixed; margin-top: 20%; z-index: 200;"
-    class="alert alert-dismissible alert-success animated fadeInLeft slow">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h6 id="username_score">Points not found try refreshing</h6>
-  </div>
-  <div id="music_warning" style="position: fixed; z-index: 200; margin-top: 12%; display: none;"
-    class="alert alert-dismissible animated fadeInUp alert-warning ">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">🧐</h4>
-    <h3 class="">Told You not to play that.</h3>
-    <h3 class="text-info">#StayHomeStaySafe </h3>
-    <h4>Leave A star on the github repository if you liked this</h4>
-    <h4>Enjoy the rest of the games </h4>
+    <h6 id="username_nav">not found try refreshing -> </h6> Points <i class="badge badge-info" id="username_score">Points not found try refreshing</i>
+    <h6 id="dontshow"class="alert alert-danger">Stop showing this</h6>
   </div>
 
   <script id="home_info" type="text/x-handlebars-template">
@@ -421,15 +408,13 @@
     </script>
   <!-- xxxxxxxxxxxxxxxxxxxxx   MODAL END xxxxxxxxxxxxxxxxxxxxxxx -->
   <script id="teamsX" type="text/x-handlebars-template">
-    <div class="row" style="padding:5%">
-        <div id="team1" class="card border-info col-xs-5 col-5 col-lg-4 col-sm-5 col-xl-4 col-md-5 customTeams animated zoomInRight slow delay-1s">
-            <div class="card-body">
-            <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Go Corona</h4>
-            <img class=" rounded " style="height:12vh;width:23vw;" src="images/logos/Gocoronalogo.jpg">
-
-            <div class= row>
+    <div class="row" style="padding-left: 5%;padding-right: 5%;">
+        <div id="team1" style="margin: 3%;"class="card border-info col-5 customTeams animated zoomInRight slow delay-1s rainbow">
+            <div class="card-body" style="background-image: url('images/logos/Gocoronalogo.jpg');background-size:100% 100%;">
+            
+            <div class= row style="padding-top: 60%;">
                 <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image1}}" height="25px">
-                <button type="button" class="badge badge-primary float-right">
+                <button type="button" class="alert alert-secondary float-right" style="background-color: #050505b7;">
                     POINTS
                     <svg class="bi bi-award-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
@@ -440,16 +425,12 @@
             </div>
             </div>
         </div>
-        <div class=" col-lg-2 col-sm-2 col-2 col-xs-2 col-xl-2 col-md-2"></div>
-    <div id="team2" class="card border-info col-xs-5 col-5 col-lg-4 col-sm-5 col-xl-4 col-md-5 customTeams animated zoomInLeft slow delay-1s">
-            <div class="card-body">
-            <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Annamma's Army</h4>
-            <img class="card-img rounded" style="height: 12vh;width:23vw;" src="images/logos/annammasarmylogo.jpg">
-
-
-            <div class= row>
+        
+    <div id="team2" style="margin: 3%;" class="rainbow card border-info col-5 customTeams animated zoomInLeft slow delay-1s">
+            <div class="card-body" style="background-image: url('images/logos/annammasarmylogo.jpg');background-size:100% 100%;">
+            <div class= row style="padding-top: 60%;">
                 <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image2}}" height="25px">
-                <button type="button" class="badge badge-primary float-right">
+                <button type="button" class="alert alert-secondary float-right" style="background-color: #ffffff4b;">
                     POINTS
                     <svg class="bi bi-award-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
@@ -461,15 +442,14 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding:5%">
-        <div id="team3" class="card border-info col-xs-5 col-5 col-lg-4 col-sm-5 col-xl-4 col-md-5 customTeams animated zoomInRight slow delay-1s">
-            <div class="card-body">
-            <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Veetil Iri🦚</h4>
-            <img class="card-img rounded" style="height: 12vh;width:23vw;" src="images/logos/Veetil Iri logo.jpg">
-            <div class= row>
-                <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image3}}" height="25px">
+    <div class="row" style="padding-left: 5%;padding-right: 5%">
+        <div id="team3" style="margin: 3%;" class="rainbow card border-info col-5 customTeams animated zoomInRight slow delay-1s">
+            <div class="card-body" style="background-image: url('images/logos/Veetil Iri logo.jpg');background-size:100% 100%;">
+            <div class= row style="padding-top: 60%;">
+                
 
-                <button type="button" class="badge badge-primary float-right">
+                <button type="button" class="alert alert-secondary float-right" style="background-color: #ffffff3f;">
+                  <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image3}}" height="25px">
                     POINTS
                     <svg class="bi bi-award-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
@@ -480,15 +460,12 @@
             </div>
             </div>
         </div>
-        <div class="col-sm-2 col-2 col-xs-2 col-lg-2 col-xl-2 col-md-2"></div>
-    <div id="team4" class="card border-info col-xs-5 col-5 col-lg-4 col-sm-5 col-xl-4 col-md-5 customTeams animated zoomInLeft slow delay-1s">
-            <div class="card-body">
-            <h4 class="card-title text-truncate text-wrap text-primary" style="font-size: 3vw;">Nammal Powlikyum</h4>
-            <img class="card-img rounded" style="height: 12vh;width:23vw;" src="images/logos/Nammal Pwolikum.png">
-            <div class= row>
+    <div id="team4" style="margin: 3%;" class="rainbow card border-info col-5 customTeams animated zoomInLeft slow delay-1s">
+            <div class="card-body" style="background-image: url('images/logos/Nammal Pwolikum.png');background-size:100% 100%;">
+            <div class= row style="padding-top: 60%;">
             <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image4}}" height="25px">
 
-                <button type="button" class="badge badge-primary float-right">
+            <button type="button" class="alert alert-secondary float-right" style="background-color: #050505b7;">
                     POINTS
                     <svg class="bi bi-award-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>

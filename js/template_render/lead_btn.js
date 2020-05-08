@@ -36,6 +36,3 @@ $('#lead_btn').on('click',function(e){
     }
         
 });
-$('#updates_btn').on('click',function(e){  
-  $("#updatesModal").modal('show');
-});

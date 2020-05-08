@@ -225,11 +225,11 @@ var eventsx={"events":[
     {
         name:"Sudoku (Team)",
         tier:"3",
-        winner1:"",
+        winner1:"Some online Sudoku Solver 1",
         winner2:"",
-        winner3:"",
-        status:"incomplete",
-        finished:""
+        winner3:"Some online Sudoku Solver 1",
+        status:"",
+        finished:"Completed"
     },
     {
         name:"Poem Writing ",

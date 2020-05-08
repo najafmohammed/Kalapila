@@ -72,91 +72,16 @@
                   </div>
            <div class="row">
                <!-- xxxxxxxxxxxxxxxxxxxxxxx LEAD    xxxxxxxxxxxxxxxx -->
-               <div id="lead_btn" style="margin: 5px;" class="col-4 btn btn-lg btn-info animated fadeInUp purple_gradient"><span class="badge badge-success">Lead</span> {{t_name1}}</div>
+               <div id="lead_btn" style="margin: 5px;" class="col-4 col-md-3 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient"><span class="badge badge-success">Lead</span> {{t_name1}}</div>
                <!-- xxxxxxxxxxxxxxxxxxxxxxx NEXT EVENT    xxxxxxxxxxxxxxxx -->
-                <div id="nxt_event" style="margin: 5px;"class="col-4 btn btn-lg btn-info animated fadeInUp purple_gradient"><span class="badge badge-success">Event</span> {{event_name}}</div>
+                <div id="nxt_event" style="margin: 5px;"class="col-4 col-md-3 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient"><span class="badge badge-success">Event</span> {{event_name}}</div>
 
-                <div id="updates_btn" style="margin: 5px;"class="col-4 btn btn-lg btn-info animated fadeInUp purple_gradient">Updates<span class="badge badge-secondary">Beta</span></div>
+                <div id="entries_btn" style="margin: 5px;"class="col-4 col-md-3 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient">Entries<span class="badge badge-secondary">Beta</span></div>
 
-                <div id="entries_btn" style="margin: 5px;"class="col-4 btn btn-lg btn-info animated fadeInUp purple_gradient">Entries<span class="badge badge-secondary">Beta</span></div>
+                <div id="load_ldrbtn" style="margin: 5px;"class="col-4 col-md-3 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient">Leaderboard<span class="badge badge-secondary">Beta</span></div>
               </div>
-              <div class="modal fade" id="updatesModal">
-                <div class="modal-dialog-full-width modal-dialog momodel modal-fluid" role="document">
-                  <div class="modal-content-full-width modal-content ">
-                      <div class=" modal-header-full-width   modal-header text-center">
-                          <h5 class="modal-title w-100" id="exampleModalPreviewLabel">{{Event_name_1}}</h5>
-                          <button type="button" class="close " data-dismiss="modal" aria-label="Close">
-                              <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body" style="padding: 3%;">
-                                            <!--Carousel Wrapper-->
-                    <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
-                      <!--Indicators-->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-2" data-slide-to="2"></li>
-                        <li data-target="#carousel-example-2" data-slide-to="3"></li>
-                      </ol>
-                      <!--/.Indicators-->
-                      <!--Slides-->
-                      <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                          <div class="view">
-                            <img class="d-block d-100  col-12 img-fluid" style="height:500px;" src="images/updates/annamma's_army.jpg" alt="First slide">
-                            <div class="mask rgba-black-light"></div>
-                            <h6 style="margin-top: 10px;">{{title_1}}</h6>
-                          </div>
-
-                        </div>
-                        <div class="carousel-item">
-                          <!--Mask color-->
-                          <div class="view">
-                            <img class="d-block d-100  col-12 img-fluid" style="height:500px" src="images/updates/Gocorna.jpg" alt="Second slide">
-                            <div class="mask rgba-black-light"></div>
-                            <h6 style="margin-top: 10px;">{{title_2}}</h6>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <!--Mask color-->
-                          <div class="view">
-                            <img class="d-block d-100  col-12 img-fluid" style="height:500px" src="images/updates/namal_pwolikum1.jpg" alt="Third slide">
-                            <div class="mask rgba-black-light"></div>
-                            <h6 style="margin-top: 10px;">{{title_3}}</h6>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <!--Mask color-->
-                          <div class="view">
-                            <img class="d-block d-100  col-12 img-fluid" style="height:500px" src="images/updates/veetil_iri.jpg" alt="Third slide">
-                            <div class="mask rgba-black-light"></div>
-                            <h6 style="margin-top: 10px;">{{title_4}}</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <!--/.Slides-->
-                      <!--Controls-->
-                      <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                      <!--/.Controls-->
-                    </div>
-                    <!--/.Carousel Wrapper-->
-                      </div>
-                      <div class="modal-footer-full-width  modal-footer">
-                          <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
-                      </div>
-                  </div>
-              </div>
-            </div>
-
        </div>
+
    </script>
 
   <script id="leaderboard" type="text/x-handlebars-template">

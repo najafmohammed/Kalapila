@@ -5,3 +5,7 @@ $('#nxt_event').on('click', function(e){
     $(document.body).append(html);
     $("#nxt_event_description").modal('show');
 });
+
+$('#load_ldrbtn').on('click',function(){  
+    loadLeaderBoard();
+  });

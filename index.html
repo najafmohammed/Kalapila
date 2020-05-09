@@ -75,14 +75,14 @@
            <div class="row">
              <center>
                <!-- xxxxxxxxxxxxxxxxxxxxxxx LEAD    xxxxxxxxxxxxxxxx -->
-               <div id="lead_btn" class="m-1 col-12 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap"><span class="badge badge-success">Lead</span></div>
+               <div id="lead_btn" class="m-1 col-12 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap">Go to team<span class="badge badge-success">Lead</span></div>
                <!-- xxxxxxxxxxxxxxxxxxxxxxx NEXT EVENT    xxxxxxxxxxxxxxxx -->
                 <div id="nxt_event"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient">{{event_name}} <span class="badge badge-success">Event</span> </div>
 
                 <div id="entries_btn"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient">Entries<span class="badge badge-secondary">Beta</span></div>
 
-                <div id="load_ldrbtn"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap">Leaderboard<span class="badge badge-secondary">Beta</span></div>
-                <div id="loading_event"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap">Events<span class="badge badge-secondary">Beta</span></div>
+                <div id="load_ldrbtn"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap">Ranking<span class="badge badge-secondary">Beta</span></div>
+                <div id="loading_event"class="m-1 col-5 col-md-2 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient text-wrap"> Events <span class="badge badge-secondary">Beta</span></div>
               
               </div>
               </center>
@@ -338,8 +338,9 @@
     </script>
   <!-- xxxxxxxxxxxxxxxxxxxxx   MODAL END xxxxxxxxxxxxxxxxxxxxxxx -->
   <script id="teamsX" type="text/x-handlebars-template">
-    <div class="row">
-        <div id="team1" class="p-3 card border-info col-6 customTeams animated fadeIn slow delay-1s rainbow">
+    <div class="container">
+    <div class="d-flex  justify-content-center">
+        <div id="team1" class="col-5 p-2 card border-info customTeams animated fadeIn slow delay-1s rainbow">
             <div class="card-body" style="background-image: url('images/logos/Gocoronalogo.jpg');background-size:100% 100%;">
             
             <div class= row style="padding-top: 60%;">
@@ -355,8 +356,8 @@
             </div>
             </div>
         </div>
-        
-    <div id="team2"  class="p-3 rainbow card border-info col-6 customTeams animated fadeIn slow delay-1s">
+        <div class="col-1"></div>
+    <div id="team2"  class="col-5 p-2 rainbow card border-info customTeams animated fadeIn slow delay-1s">
             <div class="card-body" style="background-image: url('images/logos/annammasarmylogo.jpg');background-size:100% 100%;">
             <div class= row style="padding-top: 60%;">
                 <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image2}}" height="25px">
@@ -372,8 +373,8 @@
             </div>
         </div>
     </div>
-    <div class="row ">
-        <div id="team3"  class="p-3 rainbow card border-info col-6 customTeams animated fadeIn slow delay-1s">
+    <div class="d-flex  justify-content-center" style="margin-top: 5%;">
+        <div id="team3"  class="p-2 rainbow card border-info col-5 customTeams animated fadeIn slow delay-1s">
             <div class="card-body" style="background-image: url('images/logos/Veetil Iri logo.jpg');background-size:100% 100%;">
             <div class= row style="padding-top: 60%;">
                 
@@ -390,7 +391,8 @@
             </div>
             </div>
         </div>
-    <div id="team4"  class="p-3  rainbow card border-info col-6 customTeams animated fadeIn slow delay-1s">
+        <div class="col-1"></div>
+    <div id="team4"  class="p-2  rainbow card border-info col-5 customTeams animated fadeIn slow delay-1s">
             <div class="card-body" style="background-image: url('images/logos/Nammal Pwolikum.png');background-size:100% 100%;">
             <div class= row style="padding-top: 60%;">
             <img class="float-left animated tada infinite slower delay-5s" src="{{rank_image4}}" height="25px">
@@ -407,6 +409,7 @@
             </div>
         </div>
     </div>
+  </div>
 </script>
 
   <script id="EventX" type="text/x-handlebars-template">

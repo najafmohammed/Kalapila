@@ -60,11 +60,6 @@ xlc={"t_point1":scores[0],
   $("#modalLeaderboard").modal('show');
  }
 
-
-
-$('#leaderboard_btn').on('click',function(e){
-  loadLeaderBoard();
-});
   
   xlc={"t_point1":scores[0],
   "t_point2":scores[1],

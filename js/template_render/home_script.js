@@ -46,3 +46,7 @@ function move() {
   }
 }
 move();
+
+$('#entries_btn').on('click',function(){
+  document.location.href = "allevents.html";
+});

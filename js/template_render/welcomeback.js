@@ -1,5 +1,4 @@
 $('#login_button').on('click', function(e){ 
-    console.log(document.getElementById('typed_username').value);
     var x="";
     x=document.getElementById('typed_username').value;
     myObj = {name: x};

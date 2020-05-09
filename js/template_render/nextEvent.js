@@ -9,3 +9,5 @@ $('#nxt_event').on('click', function(e){
 $('#load_ldrbtn').on('click',function(){  
     loadLeaderBoard();
   });
+  
+  

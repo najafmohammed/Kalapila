@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script src="js/Data/Team.js"></script>
+  <script src="js/Data/Icons.js"></script>
+  <script src="js/Data/images.js"></script>
   <script src="js/Data/Next_Event.js"></script>
   <title>KALAPILA</title>
   <style>
@@ -48,7 +50,7 @@
           <a class="nav-link" href="https://github.com/najafmohammed/Kalapila" target=”_blank”>About</a>
         </li>
         <li class="nav-item" data-toggle="modal" data-target="#modalLoginAvatar">
-          <a class="nav-link" href="#Events">Change User</a>
+          <a class="nav-link" >Change User</a>
         </li>
 
       </ul>
@@ -57,15 +59,15 @@
   <div id="start_warning"style="position: fixed; margin-top: 5%; z-index: 200;"
     class="alert alert-dismissible alert-primary animated fadeInLeft slow">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h6 id="username_nav">not found try refreshing -> </h6> Points <i class="badge badge-info" id="username_score">Points not found try refreshing</i>
+    <h6 id="username_nav">not found try refreshing -> </h6> Points <span class="badge badge-info" id="username_score">Points not found try refreshing</span>
     <h6 id="dontshow"class="alert alert-danger">Stop showing this</h6>
   </div>
 
   <script id="home_info" type="text/x-handlebars-template">
     <div id="home" class="jumbotron rounded-lg " style="margin: 3%;margin-top: 50px;">
-           <h3 class="container-fluid float left text-centers">Event Progress
+           <h2 class="container-fluid float left text-centers">Event Progress<span class="badge badge-info">Designed for mobile</span>
                <span class="badge badge-info animated flip slower delay-1s"> {{progress}}</span>
-           </h3>
+           </h2>
                <div class="progress animateProgress" style="background-color: #0505055e;">
                    <div style="width: 1%;"id="progress_width" class="float-left progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
                    <span class="text-info" id="progress_percentage"><h3></h3></span>
@@ -81,7 +83,6 @@
                 <div id="load_ldrbtn" style="margin: 5px;"class="col-4 col-md-3 col-lg-2 btn btn-lg btn-info animated fadeInUp purple_gradient">Leaderboard<span class="badge badge-secondary">Beta</span></div>
               </div>
        </div>
-
    </script>
 
   <script id="leaderboard" type="text/x-handlebars-template">
@@ -403,6 +404,7 @@
         </div>
     </div>
 </script>
+
   <script id="EventX" type="text/x-handlebars-template">
 
     <div id="Events" class="jumbotron table_info"style="margin:1%;">
@@ -487,6 +489,7 @@
 <script src="js/template_render/welcomeback.js"></script>
 <script src="js/template_render//Score_Script.js"></script>
 <script src="js/template_render//home_script.js"></script>
+
 <script src="js/template_render//home_team_script.js"></script>
 <script src="js/template_render//nextEvent.js"></script>
 <script src="js/template_render//lead_btn.js"></script>

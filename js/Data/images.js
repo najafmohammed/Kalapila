@@ -1,6 +1,6 @@
 var loadimages={
     Ludo:{
-        title:"LUDO",
+        title:"Ludo",
         images:[
             {
                 imgsrc:"images/Entries/Ludo/Ludo_winner.jpeg",

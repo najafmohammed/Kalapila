@@ -59,7 +59,7 @@
       <script id="Entries_modal" type="text/x-handlebars-template">
         <div class="row container p-1 m-3">
             {{#each icon_list_imgsrc}}
-            <figure data-val="{{data}}" class="Entries-btn col-3 m-1 border border-info rounded-lg animated"
+            <figure class="Entries-btn col-3 m-1 border border-info rounded-lg animated"
              style="animation-delay:{{inc @index}}s;">
                 <img data-val="{{data}}" class="Entries-btn img-thumbnail img-resize"src="{{img_src}}">
                 <span class="text-white rounded" style="background-color: rgba(0, 0, 0, 0.171);">{{img_description}}</span>
@@ -75,9 +75,13 @@
                 return valuex;
             });
           </script>
+<script id="image" type="text/x-handlebars-template">
+<div id="image_modal_render">{{> render_entry}}</div>
+</script>
+
     <script id="Ludo" type="text/x-handlebars-template">
         <!-- image slide show -->
-        <div class="modal fade right" id="Ludo_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade right" id="{{title}}_modal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog-full-width modal-dialog momodel modal-fluid" role="document">
               <div class="modal-content-full-width modal-content ">
                   <div class=" modal-header-full-width   modal-header text-center">
@@ -87,11 +91,11 @@
                       </button>
                   </div>
                   <div class="modal-body">
-                    <div id="demo1" class="carousel slide" data-ride="carousel">
+                    <div id="{{title}}control" class="carousel slide" data-ride="carousel">
                       <ul class="carousel-indicators">
-                        <li data-target="#demo1" data-slide-to="0" class=""></li>
+                        <li data-target="#{{title}}control" data-slide-to="0" class=""></li>
                         {{#each images}}
-                        <li data-target="#demo1" data-slide-to="{{@index}}+1" class=""></li>
+                        <li data-target="#{{title}}control" data-slide-to="{{@index}}+1" class=""></li>
                         {{/each}}
                       </ul>
                       <div class="carousel-inner">
@@ -110,61 +114,10 @@
                         </div>
                         {{/each}}
                       </div>
-                      <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                      <a class="carousel-control-prev" href="#{{title}}control" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                       </a>
-                      <a class="carousel-control-next" href="#demo1" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                      </a>
-                    </div>
-                    
-                  </div>
-                  <div class="modal-footer-full-width  modal-footer">
-                      <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </script>
-    <script id="eightball" type="text/x-handlebars-template">
-        <!-- image slide show -->
-        <div class="modal fade right" id="eightball_modal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog-full-width modal-dialog momodel modal-fluid" role="document">
-              <div class="modal-content-full-width modal-content ">
-                  <div class=" modal-header-full-width   modal-header text-center">
-                      <h5 class="modal-title w-100">{{title}}</h5>
-                      <button type="button" class="close " data-dismiss="modal" aria-label="Close">
-                          <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <div id="demo1" class="carousel slide" data-ride="carousel">
-                      <ul class="carousel-indicators">
-                        <li data-target="#demo1" data-slide-to="0" class=""></li>
-                        {{#each images}}
-                        <li data-target="#demo1" data-slide-to="{{@index}}+1" class=""></li>
-                        {{/each}}
-                      </ul>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="arbuzu170400006.jpg" class="img-resize-modal" alt="Los Angeles">
-                          <div class="carousel-caption">
-                            <h3>SWIPE TO LOAD IMAGES</h3>
-                          </div>   
-                        </div>
-                        {{#each images}}
-                        <div class="carousel-item">
-                          <img src="{{imgsrc}}"" class="img-resize-modal" alt="Chicago" width="1100" height="500">
-                          <div class="carousel-caption">
-                            <h3>{{imgtitle}}</h3>
-                          </div>   
-                        </div>
-                        {{/each}}
-                      </div>
-                      <a class="carousel-control-prev" href="#demo1" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                      </a>
-                      <a class="carousel-control-next" href="#demo1" data-slide="next">
+                      <a class="carousel-control-next" href="#{{title}}control" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                       </a>
                     </div>

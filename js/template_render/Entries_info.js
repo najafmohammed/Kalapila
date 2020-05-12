@@ -10,30 +10,21 @@ $(".Entries-btn").on('click',function(e){
     var eleRel = $(e.currentTarget).data('val');
     //display the id and rel in the console
     console.log("Element Rel is " + eleRel);
-    switch(eleRel){
-      case "Ludo":render_ludo();break;
-      case "eightball":render_eightball();break;
-    }
+    
+    render_ludo(eleRel);
 });
 
-  function render_ludo(){
+  function render_ludo(eleRel){
     var template = $("#Ludo").html();
     var templateScript = Handlebars.compile(template);
-    var html = templateScript(loadimages.Ludo);
-    $(document.body).append(html); 
-    $("#Ludo_modal").modal('show');
+    var html = templateScript(loadimages[eleRel]);
+    var x=$(document.body).append(html); 
+    Handlebars.registerPartial('render_entry', 
+    x
+        );
+    
+    $("#"+eleRel+"_modal").modal('show');
   }
-  function render_eightball(){
-    var template = $("#eightball").html();
-    var templateScript = Handlebars.compile(template);
-    var html = templateScript(loadimages.eightball);
-    $(document.body).append(html); 
-    $("#eightball_modal").modal('show');
-  }
-
-
-
-
 
   var animations=["flip","flash","rotateIn","bounceIn","fadeIn","hinge","jackInTheBox","swing","zoomInDown"];
   var count;
@@ -48,6 +39,7 @@ $(".Entries-btn").on('click',function(e){
     console.log("is emt empty"+count);
   }
   $('.Entries-btn').addClass(animations[count]);
+  console.log("'code runing");
   var timespressed=0;
   $("#animcycler").on('click',function(e){ 
     if(count>8){count=0;}
